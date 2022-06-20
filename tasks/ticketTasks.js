@@ -11,8 +11,8 @@ task("mint","Mints a token and logs the tokenURI")
     const ticketContract = await new ethers.Contract(contractAddr, TicketContract.interface, signer)
 
     let tx = await ticketContract.mint()
-    tx.wait()
-    let tx2 = await ticketContract.tokenURI(value)
+    tx.wait(1)
+    let tx2 = await ticketContract.tokenURI(ethers.utils.parseUnits(value, 18))
     console.log(tx2);
   })
 

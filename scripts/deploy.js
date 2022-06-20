@@ -24,8 +24,9 @@ async function main() {
   const ticketsSVG = await TicketsSVG.deploy(tickets.address);
   await ticketsSVG.deployed()
 
-  console.log("Tickets deployed to:", ticketsSVG.address);
-  console.log(await ticketsSVG.owner());
+  await tickets.setTicketsSvgContract(ticketsSVG.address);
+
+  console.log("TicketsSVG deployed to:", ticketsSVG.address);
 
 }
 

@@ -29,6 +29,11 @@ module.exports = {
       accounts: [process.env.PRIVATE_KEY, process.env.PRIVATE_KEY_ALICE],
       gas: "auto",
     },
+    goerli: {
+      url: process.env.ALCHEMY_GOERLI,
+      accounts: [process.env.PRIVATE_KEY, process.env.PRIVATE_KEY_ALICE],
+      gas: "auto",
+    }
   },
 
   etherscan: {

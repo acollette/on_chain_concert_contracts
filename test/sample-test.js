@@ -7,7 +7,7 @@ describe("Greeter", function () {
 
   it("Should return the new greeting once it's changed", async function () {
 
-    [owner, alice, bob] = await ethers.getSigners();
+    [owner, alice] = await ethers.getSigners();
 
     const Tickets = await hre.ethers.getContractFactory("ticketsM");
     const tickets = await Tickets.deploy();
